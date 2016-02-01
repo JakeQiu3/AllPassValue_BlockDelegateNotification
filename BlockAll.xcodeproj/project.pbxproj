@@ -13,6 +13,8 @@
 		303D3FA01C5FB2BC0083F275 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 303D3F9F1C5FB2BC0083F275 /* Assets.xcassets */; };
 		303D3FA31C5FB2BC0083F275 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 303D3FA11C5FB2BC0083F275 /* LaunchScreen.storyboard */; };
 		303D3FAC1C5FB3160083F275 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303D3FAB1C5FB3160083F275 /* ViewController.m */; };
+		303D3FB11C5FB4270083F275 /* PassValueToBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303D3FB01C5FB4270083F275 /* PassValueToBackViewController.m */; };
+		303D3FB41C5FB4480083F275 /* PassValueToFrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303D3FB31C5FB4480083F275 /* PassValueToFrontViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		303D3FA41C5FB2BC0083F275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		303D3FAA1C5FB3150083F275 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		303D3FAB1C5FB3160083F275 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		303D3FAF1C5FB4270083F275 /* PassValueToBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassValueToBackViewController.h; sourceTree = "<group>"; };
+		303D3FB01C5FB4270083F275 /* PassValueToBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassValueToBackViewController.m; sourceTree = "<group>"; };
+		303D3FB21C5FB4480083F275 /* PassValueToFrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassValueToFrontViewController.h; sourceTree = "<group>"; };
+		303D3FB31C5FB4480083F275 /* PassValueToFrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassValueToFrontViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,10 @@
 		303D3FAD1C5FB34B0083F275 /* Block传值 */ = {
 			isa = PBXGroup;
 			children = (
+				303D3FAF1C5FB4270083F275 /* PassValueToBackViewController.h */,
+				303D3FB01C5FB4270083F275 /* PassValueToBackViewController.m */,
+				303D3FB21C5FB4480083F275 /* PassValueToFrontViewController.h */,
+				303D3FB31C5FB4480083F275 /* PassValueToFrontViewController.m */,
 			);
 			name = "Block传值";
 			sourceTree = "<group>";
@@ -166,6 +176,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				303D3FAC1C5FB3160083F275 /* ViewController.m in Sources */,
+				303D3FB11C5FB4270083F275 /* PassValueToBackViewController.m in Sources */,
+				303D3FB41C5FB4480083F275 /* PassValueToFrontViewController.m in Sources */,
 				303D3F981C5FB2BC0083F275 /* AppDelegate.m in Sources */,
 				303D3F951C5FB2BC0083F275 /* main.m in Sources */,
 			);
