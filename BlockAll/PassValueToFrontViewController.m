@@ -7,31 +7,37 @@
 //
 
 #import "PassValueToFrontViewController.h"
-
+#import "TwoViewController.h"
 @interface PassValueToFrontViewController ()
-
+{
+    UIButton *_button;
+}
 @end
 
 @implementation PassValueToFrontViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self buildUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)buildUI {
+    _button = [UIButton buttonWithType:UIButtonTypeCustom];
+    _button.frame = CGRectMake(100, 100, 150, 100);
+    _button.backgroundColor = [UIColor greenColor];
+    _button.titleLabel.font = [UIFont systemFontOfSize:19];
+    [_button setTitle:@"下一页" forState:UIControlStateNormal];
+    [_button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [_button addTarget:self action:@selector(nextPage:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_button];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//点击button方法
+- (void)nextPage:(UIButton *)btn {
+    TwoViewController *twoVC = [[TwoViewController alloc] init];
+    twoVC.backToFront = ^(NSInteger number){// 1,7
+        [btn setTitle:[NSString stringWithFormat:@"%ld",(long)number] forState:UIControlStateNormal];//8
+    };
+    [self.navigationController pushViewController:twoVC animated:YES];
 }
-*/
 
 @end
