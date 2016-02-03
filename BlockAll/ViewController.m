@@ -27,7 +27,7 @@
 }
 
 - (void)loadData {
-    _fileNameArray = @[@"Block传值之从前向后传",@"Block传值之从后向前传",@"Block方法 ",@" ",@" ",@" "].mutableCopy;
+    _fileNameArray = @[@"各种传值（前到后）",@"各种传值（后到前）",@"",@" ",@" ",@" "].mutableCopy;
     _titileArray = @[@"PassValueToBackViewController",@"PassValueToFrontViewController",@"",@" ",@" "].mutableCopy;
 }
 - (void)setUI {

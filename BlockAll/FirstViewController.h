@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstViewController : UIViewController
-@property (nonatomic, strong)NSString *btnStr;
+@property (nonatomic, strong)NSString *textStr;
+- (void)passValueFirst:(NSNotification *)notification;
+
+@property (nonatomic, strong) UILabel *label;
 @end
