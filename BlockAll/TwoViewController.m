@@ -42,7 +42,7 @@
     _label.numberOfLines = 0;
     _label.text = @"传值给上一个页面";
 //    2.代理传值
-//    if ([self.                                                                                                                                                                                                                                                                                          delegate respondsToSelector:@selector(twoVC:passValueWithInfo:)]) {
+//    if (self.delegate &&[self.                                                                                                                                                                                                                                                                                          delegate respondsToSelector:@selector(twoVC:passValueWithInfo:)]) {
 // //  delegate的主体部分在这儿：这个方法走完，意味着值已经传了
 //        [self.delegate twoVC:self passValueWithInfo:_label.text];
 //    }

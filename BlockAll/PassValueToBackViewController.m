@@ -56,8 +56,8 @@
 //    [SinglePassValue shareInstance].contextStr = _textField.text;
 //   3. 通知传值:（ 顺序：必须先注册观察者，再执行发布通知，才能执行观察者方法！）
 //    [[NSNotificationCenter defaultCenter]addObserver:firstVC selector:@selector(passValueFirst:) name:@"QSYPass" object:nil];
-//    4.代理传值：
-    self.delegate = firstVC;
+//    4.代理传值：代理传值中，无论optional或required，都无需专门遵守协议！
+    self.delegate = (id)firstVC;
 //    5.block传值
     self.frontToBack = ^(NSString *title){
         firstVC.textStr = title;//间接传值
@@ -101,7 +101,7 @@
     NSLog(@"%@",dic[@"title"]);
     
     //   执行代理
-    if ([self.delegate respondsToSelector:@selector(PassValueToBackVC:passText:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(PassValueToBackVC:passText:)]) {
         [self.delegate PassValueToBackVC:self passText:_textField.text];
     }
 

@@ -27,8 +27,8 @@
 }
 
 - (void)loadData {
-    _fileNameArray = @[@"各种传值（前到后）",@"各种传值（后到前）",@"",@" ",@" ",@" "].mutableCopy;
-    _titileArray = @[@"PassValueToBackViewController",@"PassValueToFrontViewController",@"",@" ",@" "].mutableCopy;
+    _fileNameArray = @[@"各种传值（前到后）",@"各种传值（后到前）",@"Block方法使用介绍",@"",@"",@""].mutableCopy;
+    _titileArray = @[@"PassValueToBackViewController",@"PassValueToFrontViewController",@"BlockMessageViewController",@"",@""].mutableCopy;
 }
 - (void)setUI {
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
