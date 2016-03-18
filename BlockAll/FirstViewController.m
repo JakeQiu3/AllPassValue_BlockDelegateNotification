@@ -41,8 +41,8 @@
 }
 //    3.通知传值的方法
 - (void)passValueFirst:(NSNotification *)notification {
-//    self.textStr = notification.userInfo[@"title"];// 间接传值
-    _label.text = notification.userInfo[@"title"];// 直接传值给label
+    self.textStr = notification.userInfo[@"title"];// 间接传值配合上面_label.text = self.textStr  操作
+//    _label.text = notification.userInfo[@"title"];// 直接传值给label
     NSLog(@"==%@=====%@",notification.userInfo[@"title"],_label.text);
 }
 

@@ -55,16 +55,17 @@
 //   2. 单利传值
 //    [SinglePassValue shareInstance].contextStr = _textField.text;
 //   3. 通知传值:（ 顺序：必须先注册观察者，再执行发布通知，才能执行观察者方法！）
-//    [[NSNotificationCenter defaultCenter]addObserver:firstVC selector:@selector(passValueFirst:) name:@"QSYPass" object:nil];
-//    4.代理传值：代理传值中，无论optional或required，都无需专门遵守协议！
-    self.delegate = (id)firstVC;
-//    5.block传值
-    self.frontToBack = ^(NSString *title){
-        firstVC.textStr = title;//间接传值
-//        firstVC.label.text = title;//直接传值
-        NSLog(@"===%@===========%@",title,firstVC.textStr);
-    };
     
+    [[NSNotificationCenter defaultCenter]addObserver:firstVC selector:@selector(passValueFirst:) name:@"QSYPass" object:nil];
+//    4.代理传值：代理传值中，无论optional或required，都无需专门遵守协议！
+//    self.delegate = (id)firstVC;
+//    5.block传值
+//    self.frontToBack = ^(NSString *title){
+//        firstVC.textStr = title;//间接传值
+////        firstVC.label.text = title;//直接传值
+//        NSLog(@"===%@===========%@",title,firstVC.textStr);
+//    };
+//    
     [self.navigationController pushViewController:firstVC animated:YES];
  #warning 少 ——> 陷阱：传过去值了，但控件的创建是放在viewdidLoad里面，是这个button方法全部执行完后才会去执行的，这样就不会显示，故选择viewDidDisappear方法。
 //测试 NSDictionary *dic = @{@"title":_textField.text};
@@ -72,7 +73,7 @@
 //    NSLog(@"%@",dic[@"title"]);
 }
 
-////该方法是后一个视图viewWillAppear加载完毕后，viewDidAppear未加载时，才执行。
+#warning 少，重点 -> 该方法是后一个视图viewWillAppear加载完毕后，viewDidAppear未加载时，才执行。
 //- (void)viewDidDisappear:(BOOL)animated {
 //    [super viewDidDisappear:animated];
 ////    发布通知
@@ -91,7 +92,8 @@
 //    }
 //
 //}
-//视图将会消失，在下一个视图加载前，就执行了。故不能直接把数据传给控件（因为此时控件还没创建，为nil），而是把数据传给下一个视图的属性。
+
+#warning 少，重点 -> 视图将会消失，在下一个视图加载前，就执行了。故不能直接把数据传给控件（因为此时控件还没创建，为nil），而是把数据传给下一个视图的属性。
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
