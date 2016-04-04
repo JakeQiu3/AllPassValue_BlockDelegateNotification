@@ -19,8 +19,6 @@
 		30BDD6141C60F64D00F8746D /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BDD6131C60F64D00F8746D /* TwoViewController.m */; };
 		30BDD6171C60F65A00F8746D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BDD6161C60F65A00F8746D /* FirstViewController.m */; };
 		731D4DD01C61A1C70064D886 /* SinglePassValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 731D4DCF1C61A1C70064D886 /* SinglePassValue.m */; };
-		73EDFF521CA5461400E8600F /* 一个瑜伽行者的自传.pages in Resources */ = {isa = PBXBuildFile; fileRef = 73EDFF511CA5461400E8600F /* 一个瑜伽行者的自传.pages */; };
-		73EDFF541CA5461A00E8600F /* 你值得过更好的生活(完整图文版).pdf in Resources */ = {isa = PBXBuildFile; fileRef = 73EDFF531CA5461A00E8600F /* 你值得过更好的生活(完整图文版).pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,8 +44,6 @@
 		30BDD6161C60F65A00F8746D /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		731D4DCE1C61A1C70064D886 /* SinglePassValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinglePassValue.h; sourceTree = "<group>"; };
 		731D4DCF1C61A1C70064D886 /* SinglePassValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinglePassValue.m; sourceTree = "<group>"; };
-		73EDFF511CA5461400E8600F /* 一个瑜伽行者的自传.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = "一个瑜伽行者的自传.pages"; sourceTree = "<group>"; };
-		73EDFF531CA5461A00E8600F /* 你值得过更好的生活(完整图文版).pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "你值得过更好的生活(完整图文版).pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +123,6 @@
 		731D4DD51C61E46C0064D886 /* 前到后 */ = {
 			isa = PBXGroup;
 			children = (
-				73EDFF511CA5461400E8600F /* 一个瑜伽行者的自传.pages */,
-				73EDFF531CA5461A00E8600F /* 你值得过更好的生活(完整图文版).pdf */,
 				303D3FAF1C5FB4270083F275 /* PassValueToBackViewController.h */,
 				303D3FB01C5FB4270083F275 /* PassValueToBackViewController.m */,
 				30BDD6151C60F65A00F8746D /* FirstViewController.h */,
@@ -208,8 +202,6 @@
 				303D3FA31C5FB2BC0083F275 /* LaunchScreen.storyboard in Resources */,
 				303D3FA01C5FB2BC0083F275 /* Assets.xcassets in Resources */,
 				303D3F9E1C5FB2BC0083F275 /* Main.storyboard in Resources */,
-				73EDFF541CA5461A00E8600F /* 你值得过更好的生活(完整图文版).pdf in Resources */,
-				73EDFF521CA5461400E8600F /* 一个瑜伽行者的自传.pages in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
