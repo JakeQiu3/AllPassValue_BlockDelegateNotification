@@ -48,24 +48,34 @@
 
 #warning 少 ——> 前到后传值：遵循在前一个界面就完成传值的原则：属性最简单，单利次之，代理(回调)不适合，通知方法（回调）不适合，block(回调)不适合
 - (void)nextPage:(UIButton *)btn {
-   
+#pragma mark 少 ============= 计算机的大一统思想：第三者思想=============
+    
     FirstViewController *firstVC = [[FirstViewController alloc] init];
 //   1. 属性传值:
 //    firstVC.textStr = _textField.text;
 //   2. 单利传值
 //    [SinglePassValue shareInstance].contextStr = _textField.text;
-//   3. 通知传值:（ 顺序：必须先注册观察者，再执行发布通知，才能执行观察者方法！）
+//   3. 通知传值:（ 顺序：必须先注册观察者，再执行发布通知，才能执行观察者方法！）  使用场景： A对象（控制器）的交互 post ，影响到B对象（控制器）addObserve。
     
     [[NSNotificationCenter defaultCenter]addObserver:firstVC selector:@selector(passValueFirst:) name:@"QSYPass" object:nil];
-//    4.代理传值：代理传值中，无论optional或required，都无需专门遵守协议！
+//    4.代理传值：代理传值中，无论optional或required，都无需专门遵守协议！    使用场景： A对象（控制器）的交互，影响到B对象（控制器）delegate，execute methods。
 //    self.delegate = (id)firstVC;
-//    5.block传值
+    
+    
+//    5.block传值  使用场景：A对象（控制器）的交互 block属性，影响到B对象（控制器） Block的回调方法。
 //    self.frontToBack = ^(NSString *title){
 //        firstVC.textStr = title;//间接传值
 ////        firstVC.label.text = title;//直接传值
 //        NSLog(@"===%@===========%@",title,firstVC.textStr);
 //    };
-//    
+      
+//// =========插播一条Block的使用==============
+//    void (^changeColorBlock)(UIColor *color) = ^(UIColor *color) {
+//        [self.view setBackgroundColor:color];
+//    };
+////    block回调
+//    changeColorBlock([UIColor redColor]);
+  
     [self.navigationController pushViewController:firstVC animated:YES];
  #warning 少 ——> 陷阱：传过去值了，但控件的创建是放在viewdidLoad里面，是这个button方法全部执行完后才会去执行的，这样就不会显示，故选择viewDidDisappear方法。
 //测试 NSDictionary *dic = @{@"title":_textField.text};
@@ -82,7 +92,7 @@
 //    NSLog(@"%@",dic[@"title"]);
 //    
 ////   执行代理
-//    if ([self.delegate respondsToSelector:@selector(PassValueToBackVC:passText:)]) {
+//    if (self.delegate && [self.delegate respondsToSelector:@selector(PassValueToBackVC:passText:)]) {
 //        [self.delegate PassValueToBackVC:self passText:_textField.text];
 //    }
 //

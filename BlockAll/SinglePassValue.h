@@ -12,4 +12,5 @@
 //单利传值
 @property (nonatomic, strong) NSString *contextStr;
 + (instancetype)shareInstance;
++ (instancetype)shareInstance1;
 @end

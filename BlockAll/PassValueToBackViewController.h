@@ -21,6 +21,8 @@ typedef void(^FrontToBack) ();
 //2.声明block属性
 @property (nonatomic, copy)FrontToBack frontToBack;
 
+//@property (nonatomic, copy)void (^Gu)(UIColor *);//未重命名的block 属性
+
 //4.代理
 @property (nonatomic, assign) id<PassValueToBackViewControllerDelegate> delegate;
 
