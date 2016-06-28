@@ -96,10 +96,10 @@
 #warning 少，重点 -> 视图将会消失，在下一个视图加载前，就执行了。故不能直接把数据传给控件（因为此时控件还没创建，为nil），而是把数据传给下一个视图的属性。
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    
+//==================================核心================================
     //    发布通知
     NSDictionary *dic = @{@"title":_textField.text};
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"QSYPass" object:self userInfo:dic];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"QSYPass" object:self userInfo:dic];
     NSLog(@"%@",dic[@"title"]);
     
     //   执行代理
